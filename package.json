@@ -1,0 +1,14 @@
+{
+  "name": "oh-my-food",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass -w ./src/sass/main.scss:./public/styles/main.css -s expanded"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "sass": "^1.77.8"
+  }
+}
