@@ -39,9 +39,9 @@ header img {
 .location {
   display: flex;
   justify-content: center;
-  background-color: #d9d9d9;
+  background-color: #eaeaea;
   gap: 20px;
-  border-top: 4px solid #cccccc;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 3px -3px inset;
 }
 .location i {
   align-self: center;
@@ -50,7 +50,7 @@ header img {
 .explore {
   display: flex;
   flex-direction: column;
-  background-color: #f2f2f2;
+  background-color: #f6f6f6;
   align-items: center;
   justify-content: center;
   padding: 20px 40px;
@@ -58,7 +58,7 @@ header img {
 }
 .explore__btn {
   border: none;
-  background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  background-image: linear-gradient(to bottom, #FF79DA, #9356DC);
   color: white;
   padding: 15px 20px;
   border-radius: 30px;
@@ -66,8 +66,8 @@ header img {
   margin-top: 30px;
   margin-bottom: 30px;
 }
-.explore__btn:hover::after {
-  opacity: 1;
+.explore__btn:hover {
+  background-image: linear-gradient(to bottom, #fface8, #ae80e5);
 }
 
 /*# sourceMappingURL=main.css.map */

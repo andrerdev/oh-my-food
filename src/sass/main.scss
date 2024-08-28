@@ -1,8 +1,9 @@
 $color-primary: #9356DC;
 $color-secondary: #FF79DA;
 $color-tertiary: #99E2D0;
-$color-background: #f2f2f2;
-$color-gradient: linear-gradient(to bottom right, $color-secondary, $color-primary); 
+$color-background: #f6f6f6;
+$color-gradient: linear-gradient(to bottom, $color-secondary, $color-primary); 
+$color-gradient-light: linear-gradient(to bottom, lighten($color-secondary, 10%), lighten($color-primary, 10%)); 
 
 html {
     -webkit-box-sizing: inherit;
@@ -46,9 +47,10 @@ header {
 .location {
     display: flex;
     justify-content: center;
-    background-color: darken($color-background, 10%);
+    background-color: #eaeaea;
     gap: 20px;
-    border-top: 4px solid darken($color-background, 15%);
+    // border-top: 4px solid darken($color-background, 15%);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 3px -3px inset;
 
     i {
         align-self: center;
@@ -76,9 +78,11 @@ header {
         margin-top: 30px;
         margin-bottom: 30px;
         &:hover {
-            &::after {
-                opacity: 1;
-            }
+            background-image: $color-gradient-light;
+            // &::after {
+            //     opacity: 1;
+            // }
+
         }
         // &::after {
         //     content: '';
