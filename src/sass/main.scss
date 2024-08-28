@@ -2,6 +2,7 @@ $color-primary: #9356DC;
 $color-secondary: #FF79DA;
 $color-tertiary: #99E2D0;
 $color-background: #f2f2f2;
+$color-gradient: linear-gradient(to bottom right, $color-secondary, $color-primary); 
 
 html {
     -webkit-box-sizing: inherit;
@@ -30,9 +31,15 @@ header {
     align-items: center;
     width: 100%;
 
+    h1 {
+        display: flex;
+        justify-content: center;
+        margin: 0;
+    }
     img {
         padding: 20px;
         width: 60%;
+        min-width: 200px;
     }
 }
 
@@ -45,6 +52,47 @@ header {
 
     i {
         align-self: center;
+    }
+}
+
+.explore {
+    display: flex;
+    flex-direction: column;
+    background-color: $color-background;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 40px;
+    text-align: center;
+    
+
+    &__btn {
+        border: none;
+        //for the linear-gradient to work, i had to replace background-color with background-image//
+        background-image: $color-gradient;
+        color: white;
+        padding: 15px 20px;
+        border-radius: 30px;
+        position: relative;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        &:hover {
+            &::after {
+                opacity: 1;
+            }
+        }
+        // &::after {
+        //     content: '';
+        //     position: absolute;
+        //     top: 0;
+        //     right: 0;
+        //     bottom: 0;
+        //     left: 0;
+        //     background-image: lighten($color-gradient, 5);
+        //     opacity: 0;
+        //     z-index: -1;
+        //     transition: opacity 250ms;
+
+        // }
     }
 }
 
