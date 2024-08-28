@@ -1,10 +1,27 @@
 $color-primary: #9356DC;
 $color-secondary: #FF79DA;
 $color-tertiary: #99E2D0;
+$color-background: #f2f2f2;
+
+html {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: border-box;  
+}
+
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit;
+}
 
 body {
     display: flex;
     flex-direction: column;
+    font-family: 'Roboto';
+    margin: auto;
 }
 
 header {
@@ -14,8 +31,20 @@ header {
     width: 100%;
 
     img {
-        padding: 10px;
-        width: 50%;
+        padding: 20px;
+        width: 60%;
+    }
+}
+
+.location {
+    display: flex;
+    justify-content: center;
+    background-color: darken($color-background, 10%);
+    gap: 20px;
+    border-top: 4px solid darken($color-background, 15%);
+
+    i {
+        align-self: center;
     }
 }
 
